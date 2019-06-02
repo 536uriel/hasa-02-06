@@ -1,0 +1,35 @@
+<div class="pageContainer">
+
+    <div class="item1">
+      <div class="menuHedder">
+        <br><br>
+          <button (click)="auth.logout()">log out</button>
+      </div>
+  
+      <div class="menuFotter">
+    <app-inputs-num-for-img (outStudents)="setStudentsArrey($event)" (outTeachers)="setTechersArrey($event)"></app-inputs-num-for-img>
+    <br>
+
+    <button *ngIf="false" (click)="cuptureScreen()">send img</button>
+  </div>
+    </div>
+
+    <div class="background" id="container">
+    <div class="item2">
+    <app-display-students [arrStudents]="studentsArr" [imageSrc]="imgS" [RHW]="range" [RGS]="range2" [RR]="range3" [name]="stuName"></app-display-students>
+    </div>
+
+   
+
+    <div class="item3">
+    <app-display-teachers [arrTeachers]="teachersArr" [imageSrct]="imgSt" [RHWt]="ranget" [RGSt]="range2t" [RRt]="range3t" [namet]="stuNamet"></app-display-teachers>
+    </div>
+  </div>
+
+    </div>
+    
+   
+<div>
+
+
+

@@ -1,0 +1,48 @@
+.pageContainer{
+    display: flex;
+   
+    
+
+}
+.menuHedder{
+    height: 30%;
+    padding: 10%;
+}
+
+.menuFotter{
+    padding: 10%;
+}
+
+.item1{
+    background-image: url("../../assets/imges/menu.png");
+    background-size: 100% 100%;
+    width: 20%;
+   min-height: 100%;
+}
+
+.item2{
+   
+    max-width: 40%;
+   max-height: 100%;
+  
+   
+}
+
+.item3{
+    max-width: 40%;
+    max-height: 100%;
+}
+
+
+
+.background{
+    background-image: url("../../assets/imges/Background.jpg");
+    background-size: 100% 100%;
+    
+   
+    width: 100%;
+  
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}

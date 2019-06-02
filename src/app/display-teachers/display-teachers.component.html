@@ -1,0 +1,33 @@
+<div class="flexItems">
+        <div class="item"  [id]='"ct" + i' data-toggle="modal" [attr.data-target]='"#st" + i' *ngFor="let i of arrTeachers" style="padding:50px;">
+          <img *ngIf="!imageSrct[i]" src="../../assets/imges/upload image.png" width="30" height="30">
+          <img ngDraggable [id]='"imt" + i' *ngIf="imageSrct[i]" [src]="imageSrct[i]" [width]="RHWt[i]" [height]="RHWt[i]">
+        </div>
+        </div>
+        <img id="Portrait" src="../../assets/imges/Portrait.png" style="display:none;">
+        
+          <!-- Modal -->
+          <div class="modal fade" *ngFor="let i of arrTeachers" [id]='"st" + i' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                
+            
+                <div class="modal-body">
+                <input type="file" [id]='"ft" + i' (change)="readURL($event)" style="display:none;">
+                <img [id]='"it" +  i' *ngIf="imageSrct[i]" [src]="imageSrct[i]" [width]="RHWt[i]" [height]="RHWt[i]">
+                <input type="range" [(ngModel)]="RHWt[i]" class="slider" min="0" max="100" value="50">
+                <input type="range" [(ngModel)]="RGSt[i]" class="sliderGS" min="0" max="100" value="50">
+                <input type="range" [(ngModel)]="RRt[i]" class="sliderR" min="0" max="100" value="50">
+               
+                </div>
+            
+        
+                <div class="modal-footer">
+                    <input type="text" [(ngModel)]="namet[i]">
+                    <label [for]='"ft" + i'><img src="../../assets/imges/upload image.png" width="30"></label>
+                  <img src="../../assets/imges/OK button-01.png" width="40" height="40" data-dismiss="modal" >
+        
+                </div>
+              </div>
+            </div>
+          </div>
